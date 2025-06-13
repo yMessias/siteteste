@@ -25,11 +25,6 @@
       margin: 0;
     }
 
-    h2 {
-      font-size: 1.5em;
-      color: #aaa;
-    }
-
     .button {
       margin-top: 40px;
       padding: 15px 30px;
@@ -46,38 +41,20 @@
       background-color: #4169e1;
     }
 
-    section {
-      margin-top: 60px;
-      text-align: center;
+    .link-container {
+      margin-top: 50px;
     }
 
-    .space-background {
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 70%);
-      height: 200px;
-      margin: 20px auto;
-      width: 100%;
-      position: relative;
-      border-radius: 8px;
+    .link-container a {
+      color: #1e90ff;
+      font-size: 1.5em;
+      text-decoration: none;
+      margin: 20px;
+      display: inline-block;
     }
 
-    .space-background::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 50px;
-      height: 50px;
-      background-color: white;
-      border-radius: 50%;
-      animation: orbit 4s infinite linear;
-    }
-
-    @keyframes orbit {
-      0% { top: 50%; left: 50%; }
-      25% { top: 20%; left: 80%; }
-      50% { top: 50%; left: 100%; }
-      75% { top: 80%; left: 80%; }
-      100% { top: 50%; left: 50%; }
+    .link-container a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -85,21 +62,16 @@
 
   <header>
     <h1>Exploração Espacial</h1>
-    <h2>Descubra os mistérios do universo!</h2>
+    <p>Junte-se à missão para explorar o universo!</p>
   </header>
 
-  <section>
-    <p>Clique no botão abaixo para iniciar a jornada:</p>
-    <button class="button">Começar Missão</button>
-  </section>
-
-  <section class="space-background">
-    <!-- Simula um "orbital" no espaço com animação -->
+  <section class="link-container">
+    <a href="https://www.youtube.com/user/NASA" target="_blank">Canal da NASA no YouTube</a>
   </section>
 
   <section>
-    <h2>Estamos prontos para explorar!</h2>
-    <p>Junte-se a nós nesta missão para os confins do universo.</p>
+    <p>Fique por dentro das últimas notícias sobre o espaço!</p>
+    <a href="https://www.nasa.gov/" target="_blank" class="button">Notícias da NASA</a>
   </section>
 
 </body>
