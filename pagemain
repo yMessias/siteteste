@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exploração Espacial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #000011, #000033);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-bottom: 1px solid #444;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .button {
+      margin-top: 40px;
+      padding: 15px 30px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #4169e1;
+    }
+
+    section {
+      margin-top: 60px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Exploração Espacial</h1>
+    <p>Descubra os mistérios do universo!</p>
+  </header>
+
+  <section>
+    <p>Clique no botão abaixo para iniciar a jornada:</p>
+    <button class="button">Começar Missão</button>
+  </section>
+
+  <section>
+    <h2>Imagem do Espaço</h2>
+    <img src="https://images.unsplash.com/photo-1580428183261-ef54f78b30d9?auto=format&fit=crop&w=1200&q=80" alt="Espaço sideral">
+  </section>
+</body>
+</html>
