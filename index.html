@@ -10,7 +10,11 @@
       background: #1b1b1b;
       color: white;
       text-align: center;
-      padding: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
     }
 
     h1 {
@@ -19,18 +23,8 @@
       color: #fff;
     }
 
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      margin: 20px 0;
-      border-radius: 8px;
-    }
-
     .button {
-      margin-top: 30px;
-      padding: 12px 30px;
+      padding: 15px 30px;
       background-color: #007BFF;
       color: white;
       border: none;
@@ -38,25 +32,16 @@
       font-size: 1.2em;
       cursor: pointer;
       transition: background-color 0.3s;
+      margin: 10px;
+      text-decoration: none;
     }
 
     .button:hover {
       background-color: #0056b3;
     }
 
-    .image-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-      display: none; /* Inicia oculto */
-    }
-
-    .image-container img {
-      max-width: 300px;
-      max-height: 200px;
-      border-radius: 10px;
+    .button-container {
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -64,25 +49,23 @@
 
   <h1>Exploração Espacial</h1>
 
-  <!-- Iframe do vídeo -->
-  <iframe src="https://www.youtube.com/embed/_MwmAwTQurs" title="Vídeo da NASA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- Botões para Imagens e Notícias -->
+  <div class="button-container">
+    <button class="button" onclick="mostrarImagens()">Galeria de Imagens</button>
+    <button class="button" onclick="window.location.href='https://www.nasa.gov/'">Notícias da NASA</button>
+  </div>
 
-  <!-- Botões para mostrar as imagens -->
-  <button class="button" onclick="mostrarImagens()">Galeria de Imagens</button>
-
-  <!-- Galeria de Imagens (inicialmente oculta) -->
-  <div class="image-container" id="galeria-imagens">
-    <img src="https://spaceplace.nasa.gov/images/earth.gif" alt="Imagem do espaço 1">
-    <img src="https://spaceplace.nasa.gov/images/planets.jpg" alt="Imagem do espaço 2">
-    <img src="https://spaceplace.nasa.gov/images/space_exploration.jpg" alt="Imagem do espaço 3">
+  <!-- Galeria de Imagens (oculta inicialmente) -->
+  <div class="image-container" id="galeria-imagens" style="display: none;">
+    <p>Imagens do espaço seriam exibidas aqui...</p>
   </div>
 
   <script>
     function mostrarImagens() {
-      var galeria = document.getElementById("galeria-imagens");
-      galeria.style.display = galeria.style.display === "flex" ? "none" : "flex";
+      alert('A galeria de imagens pode ser exibida aqui!');
     }
   </script>
 
 </body>
 </html>
+
