@@ -7,21 +7,27 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #000011, #000033);
+      background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(29, 29, 29, 1) 100%);
       color: white;
       text-align: center;
       padding: 50px;
     }
 
     header {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.5);
       padding: 20px;
       border-bottom: 1px solid #444;
+      margin-bottom: 40px;
     }
 
     h1 {
       font-size: 3em;
       margin: 0;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #aaa;
     }
 
     .button {
@@ -42,20 +48,44 @@
 
     section {
       margin-top: 60px;
+      text-align: center;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 30px;
+    .space-background {
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 70%);
+      height: 200px;
+      margin: 20px auto;
+      width: 100%;
+      position: relative;
+      border-radius: 8px;
+    }
+
+    .space-background::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      animation: orbit 4s infinite linear;
+    }
+
+    @keyframes orbit {
+      0% { top: 50%; left: 50%; }
+      25% { top: 20%; left: 80%; }
+      50% { top: 50%; left: 100%; }
+      75% { top: 80%; left: 80%; }
+      100% { top: 50%; left: 50%; }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Exploração Espacial</h1>
-    <p>Descubra os mistérios do universo!</p>
+    <h2>Descubra os mistérios do universo!</h2>
   </header>
 
   <section>
@@ -63,9 +93,14 @@
     <button class="button">Começar Missão</button>
   </section>
 
-  <section>
-    <h2>Imagem do Espaço</h2>
-    <img src="https://images.unsplash.com/photo-1580428183261-ef54f78b30d9?auto=format&fit=crop&w=1200&q=80" alt="Espaço sideral">
+  <section class="space-background">
+    <!-- Simula um "orbital" no espaço com animação -->
   </section>
+
+  <section>
+    <h2>Estamos prontos para explorar!</h2>
+    <p>Junte-se a nós nesta missão para os confins do universo.</p>
+  </section>
+
 </body>
 </html>
