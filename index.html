@@ -7,72 +7,82 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(29, 29, 29, 1) 100%);
+      background: #1b1b1b;
       color: white;
       text-align: center;
       padding: 50px;
     }
 
-    header {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-bottom: 1px solid #444;
-      margin-bottom: 40px;
-    }
-
     h1 {
       font-size: 3em;
-      margin: 0;
+      margin: 0 0 30px;
+      color: #fff;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      margin: 20px 0;
+      border-radius: 8px;
     }
 
     .button {
-      margin-top: 40px;
-      padding: 15px 30px;
-      background-color: #1e90ff;
+      margin-top: 30px;
+      padding: 12px 30px;
+      background-color: #007BFF;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 5px;
       font-size: 1.2em;
       cursor: pointer;
       transition: background-color 0.3s;
     }
 
     .button:hover {
-      background-color: #4169e1;
+      background-color: #0056b3;
     }
 
-    .link-container {
-      margin-top: 50px;
+    .image-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      display: none; /* Inicia oculto */
     }
 
-    .link-container a {
-      color: #1e90ff;
-      font-size: 1.5em;
-      text-decoration: none;
-      margin: 20px;
-      display: inline-block;
-    }
-
-    .link-container a:hover {
-      text-decoration: underline;
+    .image-container img {
+      max-width: 300px;
+      max-height: 200px;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Exploração Espacial</h1>
-    <p>Junte-se à missão para explorar o universo!</p>
-  </header>
+  <h1>Exploração Espacial</h1>
 
-  <section class="link-container">
-    <a href="https://www.youtube.com/user/NASA" target="_blank">Canal da NASA no YouTube</a>
-  </section>
+  <!-- Iframe do vídeo -->
+  <iframe src="https://www.youtube.com/embed/_MwmAwTQurs" title="Vídeo da NASA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  <section>
-    <p>Fique por dentro das últimas notícias sobre o espaço!</p>
-    <a href="https://www.nasa.gov/" target="_blank" class="button">Notícias da NASA</a>
-  </section>
+  <!-- Botões para mostrar as imagens -->
+  <button class="button" onclick="mostrarImagens()">Galeria de Imagens</button>
+
+  <!-- Galeria de Imagens (inicialmente oculta) -->
+  <div class="image-container" id="galeria-imagens">
+    <img src="https://spaceplace.nasa.gov/images/earth.gif" alt="Imagem do espaço 1">
+    <img src="https://spaceplace.nasa.gov/images/planets.jpg" alt="Imagem do espaço 2">
+    <img src="https://spaceplace.nasa.gov/images/space_exploration.jpg" alt="Imagem do espaço 3">
+  </div>
+
+  <script>
+    function mostrarImagens() {
+      var galeria = document.getElementById("galeria-imagens");
+      galeria.style.display = galeria.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
 
 </body>
 </html>
